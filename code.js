@@ -98,3 +98,26 @@ const countDevelopers = (list) => {
   
   const test = countDevelopers(list1)
   console.log(test)
+
+// Problem 5 (kyu 8)
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+// The output should be two capital letters with a dot separating them.
+// It should look like this:
+
+// Sam Harris => S.H
+
+// Patrick Feeney => P.F
+
+const abbrevName = (name) => {
+
+  const nameArray = name.split(" ");
+
+  const letterGetter = nameArray.map(n => n[0]).join(".")
+
+  return letterGetter
+}
+
+const test = abbrevName("Jaron Lane")
+
+console.log(test)
